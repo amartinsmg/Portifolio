@@ -1,0 +1,27 @@
+{
+  "name": "amartinsmg.github.io",
+  "version": "0.1.0",
+  "description": "My personal portifolio",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Ok\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amartinsmg/Portifolio.git"
+  },
+  "keywords": [
+    "portifolio"
+  ],
+  "author": "amartinsmg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amartinsmg/Portifolio/issues"
+  },
+  "homepage": "https://github.com/amartinsmg/Portifolio#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "wasm2wat": "^1.1.1",
+    "wat2wasm": "^3.0.0"
+  }
+}
