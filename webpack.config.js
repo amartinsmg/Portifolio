@@ -8,11 +8,11 @@ module.exports = {
   entry: "./src/main.tsx",
   output: {
     filename: "assets/bundle.js",
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "build"),
   },
   mode: "production",
   devServer: {
-    static: path.resolve(__dirname, "public"),
+    static: path.resolve(__dirname, "build"),
     hot: true,
     historyApiFallback: true,
     port: 8080,

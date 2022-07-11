@@ -1,4 +1,4 @@
 base
+build
 node_modules
-public
 *.sh
