@@ -1,0 +1,37 @@
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+#page-header {
+  @include f-row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: $primary-color;
+}
+
+#page-logo {
+  height: 2.5rem;
+}
+
+#page-nav-ul {
+  @include f-row;
+  color: #ffffff;
+  list-style: none;
+  font-family: 'IBM Plex Mono', monospace;
+  li {
+    width: 5rem;
+  }
+  a:link {
+    color: inherit;
+  }
+  a:visited {
+    color: inherit;
+  }
+  a:hover {
+    color: inherit;
+  }
+  a:active {
+    color: inherit;
+  }
+}
