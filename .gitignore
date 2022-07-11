@@ -1,3 +1,4 @@
-archive
-public
+base
 node_modules
+public
+*.sh
