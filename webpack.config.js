@@ -1,11 +1,12 @@
 const CopyPlugin = require("copy-webpack-plugin"),
   CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
+  HtmlWebpackPlugin = require("html-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   path = require("path"),
   TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  entry: "./src/main.tsx",
+  entry: "./src/main.ts",
   output: {
     filename: "assets/bundle.js",
     path: path.resolve(__dirname, "build"),
@@ -14,21 +15,24 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, "build"),
     hot: true,
-    historyApiFallback: true,
     port: 8080,
     open: true,
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         use: ["babel-loader", "ts-loader"],
         exclude: /node_modules/,
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         use: "babel-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.ejs$/,
+        use: ['html-loader', 'template-ejs-loader'],
       },
       {
         test: /\.s(c|a)ss$/,
@@ -38,20 +42,24 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".scss", ".sass", ".css"],
+    extensions: [".ts", ".js", ".ejs", ".scss", ".sass", ".css"],
   },
   optimization: {
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [{ from: "src/index.html" }, { from: "assets/**/*" }],
-    }),
     new MiniCssExtractPlugin({
       filename: "assets/bundle.css",
     }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+    })
   ],
 };

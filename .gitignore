@@ -1,4 +1,2 @@
-base
 build
 node_modules
-*.sh
