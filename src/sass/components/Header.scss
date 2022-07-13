@@ -3,10 +3,13 @@
 
 #page-header {
   @include f-row;
-  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  padding: 0 2rem;
   align-items: center;
   width: 100%;
-  height: 10vh;
+  height: $header-height;
   background-color: $primary-color;
 }
 
@@ -14,24 +17,109 @@
   height: 2.5rem;
 }
 
-#navbar-ul {
-  @include f-row;
-  color: #ffffff;
-  list-style: none;
-  font-family: 'IBM Plex Mono', monospace;
-  li {
-    width: 5rem;
+#menu-toggle {
+  display: none;
+}
+
+#menu-container {
+  @include f-col;
+  cursor: pointer;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-icon {
+  @include menu-bars;
+}
+
+#menu-icon::before {
+  @include menu-bars;
+  content: '';
+  margin-top: -0.5rem;
+}
+
+#menu-icon::after {
+  @include menu-bars;
+  content: '';
+  margin-top: 0.5rem;
+}
+
+#menu-toggle:checked + #menu-container {
+  #menu-icon::before {
+    margin-top: 0;
+    transform: rotate(-45deg);
   }
-  a:link {
-    color: inherit;
+  
+  #menu-icon {
+    background: rgba(255, 255, 255, 0);
   }
-  a:visited {
-    color: inherit;
-  }
-  a:hover {
-    color: inherit;
-  }
-  a:active {
-    color: inherit;
+  
+  #menu-icon::after {
+    margin-top: 0;
+    transform: rotate(45deg);
   }
 }
+
+#navbar-ul {
+  @include f-col;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: $header-height;
+  list-style: none;
+  
+  li {
+    display: flex;
+    justify-content: center;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', monospace;
+    background: $dark-color;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+// #menu-toggle ~ #navbar-ul li {
+// }
+
+#menu-toggle:checked ~ #navbar-ul {  
+  li {
+    height: 2.5rem;
+    padding: 0.5rem;
+    // transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  li:not(:first-child) {
+    border-top: solid 0.2rem #1f1f1f;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #page-header {
+    justify-content: space-around;
+  }
+  
+  #menu-container {
+    display: none;
+  }
+  
+  #navbar-ul {
+    position: static;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+    gap: 2rem;
+    background: transparent;
+    li {
+      height: 100%;
+      background: transparent;
+    }
+  }
+}
+
+

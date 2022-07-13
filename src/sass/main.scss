@@ -9,4 +9,20 @@ html {
   font-size: 20px;
 }
 
+a:link {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
 @import "components/Header.scss";

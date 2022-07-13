@@ -2,3 +2,18 @@
   display: flex;
   flex-direction: row;
 }
+
+@mixin f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin menu-bars {
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #ffffff;
+  margin: 0.3rem 0;
+  transition: transform 400ms;
+}
