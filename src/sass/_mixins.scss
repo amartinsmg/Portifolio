@@ -15,5 +15,5 @@
   height: 0.25rem;
   background-color: #ffffff;
   margin: 0.3rem 0;
-  transition: transform 400ms;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }

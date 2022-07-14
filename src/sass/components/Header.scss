@@ -52,7 +52,7 @@
   }
   
   #menu-icon {
-    background: rgba(255, 255, 255, 0);
+    background: transparent;
   }
   
   #menu-icon::after {
@@ -79,7 +79,7 @@
     overflow: hidden;
     color: #ffffff;
     font-family: 'IBM Plex Mono', monospace;
-    background: $dark-color;
+    background: $neutral-color-5;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
@@ -95,7 +95,7 @@
   }
 
   li:not(:first-child) {
-    border-top: solid 0.2rem #1f1f1f;
+    border-top: solid 0.1rem $neutral-color-4;
   }
 }
 
