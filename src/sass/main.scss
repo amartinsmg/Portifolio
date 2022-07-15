@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,10 @@
   text-decoration: none;
 }
 
-html {
+html, body {
   font-size: 20px;
+  font-family: $font-1;
+  color: $primary-color;
 }
 
 @import "elements/a";

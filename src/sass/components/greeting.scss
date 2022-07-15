@@ -11,6 +11,14 @@
   height: 100%;
   padding: 1rem;
   background: #00000077;
-  font-family: $fontf-1;
-  color: $text-color-1;
+}
+
+.blinker-effect {
+  animation: blinker 1250ms infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

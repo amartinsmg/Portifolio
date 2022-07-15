@@ -10,7 +10,7 @@
   align-items: center;
   width: 100%;
   height: $header-height;
-  background-color: $primary-color;
+  background-color: $header-bg-color;
 }
 
 #page-logo {
@@ -75,9 +75,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    color: $text-color-1;
-    font-family: $fontf-1;
-    background: $neutral-5;
+    background: $neutral-color-5;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
@@ -93,7 +91,7 @@
   }
 
   li:not(:first-child) {
-    border-top: solid 0.1rem $neutral-4;
+    border-top: solid 0.1rem $neutral-color-4;
   }
 }
 
