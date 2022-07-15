@@ -1,16 +1,16 @@
-@import '../_variables.scss';
+@import '../variables';
 
 #greeting-container {
   height: calc(100vh - $header-height);
   background: url('../../public/pexels-nicole-avagliano-2706654.jpg') no-repeat fixed center center;
   background-size: cover;
-  padding: min(5%, 2.5rem);
+  padding: min(5%, 3rem);
 }
 
 #greeting {
   height: 100%;
   padding: 1rem;
   background: #00000077;
-  font-family: 'IBM Plex Mono', monospace;
-  color: #ffffff;
+  font-family: $fontf-1;
+  color: $text-color-1;
 }

@@ -1,5 +1,5 @@
-@import "../_mixins.scss";
-@import "../_variables.scss";
+@import "../mixins";
+@import "../variables";
 
 #page-header {
   @include f-row;
@@ -34,15 +34,13 @@
 }
 
 #menu-icon::before {
-  @include menu-bars;
   content: '';
-  margin-top: -0.5rem;
+  @include menu-bars($mt: -0.5rem);
 }
 
 #menu-icon::after {
-  @include menu-bars;
   content: '';
-  margin-top: 0.5rem;
+  @include menu-bars($mt: 0.5rem);
 }
 
 #menu-toggle:checked + #menu-container {
@@ -77,9 +75,9 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    color: #ffffff;
-    font-family: 'IBM Plex Mono', monospace;
-    background: $neutral-color-5;
+    color: $text-color-1;
+    font-family: $fontf-1;
+    background: $neutral-5;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
@@ -95,7 +93,7 @@
   }
 
   li:not(:first-child) {
-    border-top: solid 0.1rem $neutral-color-4;
+    border-top: solid 0.1rem $neutral-4;
   }
 }
 
