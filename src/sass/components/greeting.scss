@@ -1,24 +1,64 @@
-@import '../variables';
+@import "../variables";
+@import "../mixins";
 
-#greeting-container {
-  height: calc(100vh - $header-height);
-  background: url('../../public/pexels-nicole-avagliano-2706654.jpg') no-repeat fixed center center;
-  background-size: cover;
-  padding: min(5%, 3rem);
-}
+$greeting-height: calc(100vh - $header-height);
+$greeting-padding: 5vw;
 
 #greeting {
-  height: 100%;
+  min-height: $greeting-height;
+  background: url("../../public/sky.jpg") no-repeat fixed right center;
+  background-size: cover;
+  padding: $greeting-padding;
+}
+
+#greeting-section {
+  @include f-col;
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc($greeting-height - $greeting-padding * 2);
+  width: 100%;
   padding: 1rem;
   background: #00000077;
+  &-text {
+    @include f-col;
+    // text-align: center;
+    gap: 0.8rem;
+  }
+  &-fig {
+    height: 18rem;
+    max-width: 100%;
+    object-fit: scale-down;
+  }
+}
+
+#text-cursor {
+  display: inline-block;
+  height: 1em;
+  width: 0.05em;
+  margin: 0 0 -0.1em 0.1em;
+  background-color: $primary-color;
 }
 
 .blinker-effect {
-  animation: blinker 1250ms infinite;
+  animation: blinker 1200ms infinite;
 }
 
 @keyframes blinker {
   50% {
-    opacity: 0;
+    background-color: #ffffee00;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // #geeeting
+  #greeting-section {
+    flex-direction: row;
+    &-text {
+      height: inherit;
+      justify-content: center;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
   }
 }

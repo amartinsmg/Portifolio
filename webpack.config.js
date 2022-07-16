@@ -1,5 +1,4 @@
-const CopyPlugin = require("copy-webpack-plugin"),
-  CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin"),
   HtmlWebpackPlugin = require("html-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   path = require("path"),
