@@ -9,34 +9,37 @@ $greeting-padding: 5vw;
   background: url("../../public/sky.jpg") no-repeat fixed right center;
   background-size: cover;
   padding: $greeting-padding;
-}
-
-#greeting-section {
-  @include f-col;
-  justify-content: space-around;
-  align-items: center;
-  min-height: calc($greeting-height - $greeting-padding * 2);
-  width: 100%;
-  padding: 1rem;
-  background: #00000077;
-  &-text {
+  font-family: $font-2;
+  &-content {
     @include f-col;
-    // text-align: center;
-    gap: 0.8rem;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;
+    min-height: calc($greeting-height - $greeting-padding * 2);
+    width: 100%;
+    padding: 1rem;
+    background: #00000077;
+    &-text {
+      @include f-col;
+      // text-align: center;
+      gap: 0.8rem;
+      &-heading {
+        font-size: 1.6rem;
+        #text-cursor {
+          display: inline-block;
+          height: 1em;
+          width: 0.05em;
+          margin: 0 0 -0.1em 0.1em;
+          background-color: $primary-color;
+        }
+      }
+    }
+    &-fig {
+      height: 18rem;
+      max-width: 100%;
+      object-fit: scale-down;
+    }
   }
-  &-fig {
-    height: 18rem;
-    max-width: 100%;
-    object-fit: scale-down;
-  }
-}
-
-#text-cursor {
-  display: inline-block;
-  height: 1em;
-  width: 0.05em;
-  margin: 0 0 -0.1em 0.1em;
-  background-color: $primary-color;
 }
 
 .blinker-effect {
@@ -50,13 +53,12 @@ $greeting-padding: 5vw;
 }
 
 @media screen and (min-width: 768px) {
-  // #geeeting
-  #greeting-section {
+  #greeting-content {
     flex-direction: row;
     &-text {
       height: inherit;
       justify-content: center;
-      h1 {
+      &-heading {
         font-size: 2.5rem;
       }
     }

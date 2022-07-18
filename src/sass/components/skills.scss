@@ -1,0 +1,63 @@
+@import "../variables";
+@import "../mixins";
+
+#skills {
+  @include f-col;
+  min-height: $greeting-height;
+  padding: 5%;
+  gap: 3rem;
+  @media screen and (min-width: 576px) {
+    justify-content: space-around;
+    padding: 10%;
+    gap: 2rem;
+  }
+}
+
+.skills {
+  &-radio {
+    display: none;
+  }
+  &-labels {
+    @include f-row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    &-label {
+      color: $neutral-color-2;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  &-text {
+    &-box {
+      background-color: $neutral-color-4;
+      height: 100%;
+      padding: 2%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      &-heading {
+        text-align: center;
+      }
+      &-code {
+        font-family: $font-2;
+      }
+    }
+  }
+  @media screen and (min-width: 576px) {
+    @include f-row;
+    &-labels {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem 5vw 0.5rem 0;
+    }
+  }
+}
+
+@include showSkill("html");
+@include showSkill("css");
+@include showSkill("sass");
+@include showSkill("javascript");
+@include showSkill("typescript");
+@include showSkill("c");

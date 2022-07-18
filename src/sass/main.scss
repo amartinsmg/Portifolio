@@ -11,9 +11,12 @@ html, body {
   font-size: 20px;
   font-family: $font-1;
   color: $primary-color;
+  background-color: $neutral-color-6;
 }
 
 @import "elements/a";
+@import "elements/container";
 
 @import "components/page-header";
 @import "components/greeting";
+@import "components/about";

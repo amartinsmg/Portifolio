@@ -1,14 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Roboto:wght@300;400&display=swap");
+
 $header-height: 3rem;
+
+$greeting-height: calc(100vh - $header-height);
 
 $header-bg-color: #0268bb;
 
-$primary-color: #ffffee;
+$primary-color: #efefef;
 
-$font-1: 'IBM Plex Mono', monospace;
+$font-1: 'Roboto', sans-serif;
+$font-2: "IBM Plex Mono", monospace;
 
-$neutral-color-5: #0F0F0F;
-$neutral-color-4: #3F3F3F;
-$neutral-color-3: #6F6F6F;
-$neutral-color-2: #9F9F9F;
-$neutral-color-1: #CFCFCF;
-
+$neutral-color-6: #0f0f0f;
+$neutral-color-5: #2f2f2f;
+$neutral-color-4: #4f4f4f;
+$neutral-color-3: #6f6f6f;
+$neutral-color-2: #9f9f9f;
+$neutral-color-1: #cfcfcf;

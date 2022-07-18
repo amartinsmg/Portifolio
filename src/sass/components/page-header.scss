@@ -3,119 +3,98 @@
 
 #page-header {
   @include f-row;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
-  justify-content: space-between;
-  padding: 0 2rem;
-  align-items: center;
   width: 100%;
   height: $header-height;
+  padding: 0 2rem;
   background-color: $header-bg-color;
-}
-
-#page-logo {
-  height: 2.5rem;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-#menu-container {
-  @include f-col;
-  cursor: pointer;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-#menu-icon {
-  @include menu-bars;
-}
-
-#menu-icon::before {
-  content: '';
-  @include menu-bars($mt: -0.5rem);
-}
-
-#menu-icon::after {
-  content: '';
-  @include menu-bars($mt: 0.5rem);
-}
-
-#menu-toggle:checked + #menu-container {
-  #menu-icon::before {
-    margin-top: 0;
-    transform: rotate(-45deg);
-  }
-  
-  #menu-icon {
-    background: transparent;
-  }
-  
-  #menu-icon::after {
-    margin-top: 0;
-    transform: rotate(45deg);
-  }
-}
-
-#navbar-ul {
-  @include f-col;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin-top: $header-height;
-  list-style: none;
-  
-  li {
-    display: flex;
-    justify-content: center;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: $neutral-color-5;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-}
-
-// #menu-toggle ~ #navbar-ul li {
-// }
-
-#menu-toggle:checked ~ #navbar-ul {  
-  li {
+  font-family: $font-2;
+  &-logo {
     height: 2.5rem;
-    padding: 0.5rem;
-    // transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-
-  li:not(:first-child) {
-    border-top: solid 0.1rem $neutral-color-4;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #page-header {
-    justify-content: space-around;
-  }
-  
-  #menu-container {
-    display: none;
-  }
-  
-  #navbar-ul {
-    position: static;
-    flex-direction: row;
-    height: 100%;
-    margin: 0;
-    gap: 2rem;
-    background: transparent;
-    li {
-      height: 100%;
+  &-navbar {
+    &-toggle {
+      display: none;
+    }
+    &-toggle:checked + &-menu &-menu-icon {
       background: transparent;
+      &::before {
+        margin-top: 0;
+        transform: rotate(-45deg);
+      }
+      &::after {
+        margin-top: 0;
+        transform: rotate(45deg);
+      }
+    }
+    &-toggle:checked ~ &-ul {
+      li {
+        height: 2.5rem;
+        padding: 0.5rem;
+      }
+      li:not(:first-child) {
+        border-top: solid 0.1rem $neutral-color-3;
+      }
+    }
+    &-menu {
+      @include f-col;
+      cursor: pointer;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      &-icon {
+        @include menu-bars;
+        &::before {
+          content: "";
+          @include menu-bars($mt: -0.5rem);
+        }
+        &::after {
+          content: "";
+          @include menu-bars($mt: 0.5rem);
+        }
+      }
+    }
+    &-ul {
+      @include f-col;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      margin-top: $header-height;
+      list-style: none;
+      li {
+        display: flex;
+        justify-content: center;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: $neutral-color-5;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+    &-navbar {
+      &-menu {
+        display: none;
+      }
+      &-ul {
+        position: static;
+        flex-direction: row;
+        height: 100%;
+        margin: 0;
+        gap: 2rem;
+        background: transparent;
+        li {
+          height: 100%;
+          background: transparent;
+        }
+      }
     }
   }
 }
-
-
