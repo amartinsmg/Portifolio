@@ -1,53 +1,64 @@
-<div id="skills">
-  <h3>Main skills</h3>
-  <div id="skills-content" class="skills">
-    <input type="radio" class="skills-radio" name="skill" id="radio-html" checked>
-    <input type="radio" class="skills-radio" name="skill" id="radio-css">
-    <input type="radio" class="skills-radio" name="skill" id="radio-sass">
-    <input type="radio" class="skills-radio" name="skill" id="radio-javascript">
-    <input type="radio" class="skills-radio" name="skill" id="radio-typescript">
-    <input type="radio" class="skills-radio" name="skill" id="radio-c">
-    <div class="skills-labels">
-      <label class="skills-labels-label" for="radio-html"><i class="devicon-html5-plain"></i></label>
-      <label class="skills-labels-label" for="radio-css"><i class="devicon-css3-plain"></i></label>
-      <label class="skills-labels-label" for="radio-sass"><i class="devicon-sass-plain"></i></label>
-      <label class="skills-labels-label" for="radio-javascript"><i class="devicon-javascript-plain"></i></label>
-      <label class="skills-labels-label" for="radio-typescript"><i class="devicon-typescript-plain"></i></label>
-      <label class="skills-labels-label" for="radio-c"><i class="devicon-c-plain"></i></label>
+<div class="skills">
+  <h3 class="skills-heading container-heading">Main skills</h3>
+  <div class="skills-content">
+    <input type="radio" class="skills-content-radio" name="skill" id="radio-html" checked>
+    <input type="radio" class="skills-content-radio" name="skill" id="radio-css">
+    <input type="radio" class="skills-content-radio" name="skill" id="radio-javascript">
+    <input type="radio" class="skills-content-radio" name="skill" id="radio-typescript">
+    <input type="radio" class="skills-content-radio" name="skill" id="radio-sqlite">
+    <input type="radio" class="skills-content-radio" name="skill" id="radio-c">
+    <div class="skills-content-labels">
+      <label class="skills-content-labels-label" for="radio-html"><i class="devicon-html5-plain"></i></label>
+      <label class="skills-content-labels-label" for="radio-css"><i class="devicon-css3-plain"></i></label>
+      <label class="skills-content-labels-label" for="radio-javascript"><i class="devicon-javascript-plain"></i></label>
+      <label class="skills-content-labels-label" for="radio-typescript"><i class="devicon-typescript-plain"></i></label>
+      <label class="skills-content-labels-label" for="radio-sqlite"><i class="devicon-sqlite-plain"></i></label>
+      <label class="skills-content-labels-label" for="radio-c"><i class="devicon-c-plain"></i></label>
     </div>
-    <div class="skills-text">
-      <div class="skills-text-box" id="text-html">
-        <h4 class="skills-text-box-heading">HTML5</h4>
+    <div class="skills-content-text">
+      <div class="skills-content-text-box" id="text-html">
+        <h4 class="skills-content-text-box-heading">HTML5</h4>
         <p>The HyperText Markup Language or HTML is the standard markup language for Web pages. It defines
           the structure of web content using semantic elements defined by tags, like headings, paragraphs,
           and sections, and allows inserting multimedia content, like images and videos. Its latest version is HTML5.
         </p>
-        <code class="skills-text-box-code">&lt;h1&gt;Hey, Jude&lt;/h1&gt;</code>
+        <code class="skills-content-text-box-code">&lt;h1&gt;Hey Jude&lt;/h1&gt;</code>
       </div>
-      <div class="skills-text-box" id="text-css">
-        <h4 class="skills-text-box-heading">CSS3</h4>
+      <div class="skills-content-text-box" id="text-css">
+        <h4 class="skills-content-text-box-heading">CSS3</h4>
         <p>The Cascading Style Sheets or CSS is a style sheet language used for describing the formatting
           of a document written in a markup language, such as HTML. It's widely used in Web pages, defining,
-          among other things, their layout, colors, and fonts. Its latest version is CSS3.
-        </p>
-        <code class="skills-text-box-code">h1 { color: red; }</code>
+          among other things, their layout, colors, and fonts. Its latest version is CSS3.</p>
+        <code class="skills-content-text-box-code">h1 { color: red; }</code>
       </div>
-      <div class="skills-text-box" id="text-sass">
-        <h4 class="skills-text-box-heading">SASS</h4>
-        <p>The Syntactically Awesome Style Sheets or SASS is a preprocessor scripting language compiled into
-          CSS. It allows using some features that don't exist in CSS. It was two syntaxes. The newer syntax,
-          "Sassy CSS", or SCSS, is a superset of CSS, i.e., all valid CSS code is valid SCSS code.
-        </p>
-        <code class="skills-text-box-code">h1 { color: $primary-color; }</code>
-      </div>
-      <div class="skills-text-box" id="text-javascript">
-        <h4 class="skills-text-box-heading">JavaScript</h4>
-      </div>
-      <div class="skills-text-box" id="text-typescript">
-        <h4 class="skills-text-box-heading">TypeScript</h4>
-      </div>
-      <div class="skills-text-box" id="text-c">
-        <h4 class="skills-text-box-heading">C</h4>
+      <div class="skills-content-text-box" id="text-javascript">
+        <h4 class="skills-content-text-box-heading">JavaScript</h4>
+        <p>JavaScript is a high-level, multi-paradigm, just-in-time compiled programming language. It is
+          used by 98% of websites because it has an <abbr title="Application Programming Interface">API</abbr>
+          for working with HTML Document Object Model, allowing add interactivity to it. All modern web
+          browsers have a JS engine. It also is used for server-side programming with Node.js or Deno.</p>
+          <code class="skills-content-text-box-code">console.log("Hey Jude");</code>
+        </div>
+        <div class="skills-content-text-box" id="text-typescript">
+          <h4 class="skills-content-text-box-heading">TypeScript</h4>
+          <p>TypeScript is a syntactic superset of JavaScript that gives it additional features, like compile-time
+            type-checking, interfaces, and namespaces. Its code can be transpiled to JavasScript code that can run
+            both in web browsers and servers. It can also run natively on server-side applications with Deno.</p>
+            <code class="skills-content-text-box-code">console.log("Hey Jude");</code>
+          </div>
+          <div class="skills-content-text-box" id="text-sqlite">
+            <h4 class="skills-content-text-box-heading">SQLite</h4>
+            <p>SQLite3 is a small, fast, self-contained, full-featured relational database engine. It is widely
+              used in embedded systems, mobile phone applications, web browsers, and many other applications.
+              It is also bindings to many programming languages.</p>
+            <code class="skills-content-text-box-code">SELECT * FROM skills;</code>
+          </div>
+      <div class="skills-content-text-box" id="text-c">
+        <h4 class="skills-content-text-box-heading">C</h4>
+        <p>C is a high-level, general-purpose, procedural programming language. It provides low-level memory
+          access and can run natively with minimal runtime support. It makes C suitable for operating systems,
+          databases, compilers, and embedded systems development. </p>
+        <code class="skills-content-text-box-code">printf("Hey Jude\n");</code>
       </div>
     </div>
   </div>

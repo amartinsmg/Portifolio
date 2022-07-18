@@ -1,8 +1,8 @@
 import "./sass/main.scss";
 
 async function writeName(): Promise<void> {
-  const WhoIAmEl = document.querySelector("#whoiam") as HTMLElement,
-    TextCursor = document.querySelector("#text-cursor") as HTMLElement,
+  const WhoIAmEl = document.querySelector("#greeting-content-text-heading-whoiam") as HTMLElement,
+    TextCursor = document.querySelector("#greeting-content-text-heading-text-cursor") as HTMLElement,
     Str = WhoIAmEl.textContent as string;
   WhoIAmEl.textContent = "";
   TextCursor.classList.remove("blinker-effect");

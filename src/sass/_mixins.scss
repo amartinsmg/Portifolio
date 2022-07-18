@@ -19,10 +19,10 @@
 }
 
 @mixin showSkill($name) {
-  #radio-#{$name}:checked ~ .skills-labels [for="radio-#{$name}"] {
-    color: $primary-color;
+  #radio-#{$name}:checked ~ .skills-content-labels [for="radio-#{$name}"] {
+    color: $secondary-color;
   }
-  #radio-#{$name}:checked ~ .skills-text #text-#{$name} {
+  #radio-#{$name}:checked ~ .skills-content-text #text-#{$name} {
     display: flex;
   }
 }

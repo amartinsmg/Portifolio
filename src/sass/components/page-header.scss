@@ -10,7 +10,7 @@
   width: 100%;
   height: $header-height;
   padding: 0 2rem;
-  background-color: $header-bg-color;
+  background-color: $bg-color-2;
   font-family: $font-2;
   &-logo {
     height: 2.5rem;
@@ -49,11 +49,11 @@
         @include menu-bars;
         &::before {
           content: "";
-          @include menu-bars($mt: -0.5rem);
+          @include menu-bars(-0.5rem);
         }
         &::after {
           content: "";
-          @include menu-bars($mt: 0.5rem);
+          @include menu-bars(0.5rem);
         }
       }
     }
@@ -66,13 +66,14 @@
       margin-top: $header-height;
       list-style: none;
       li {
-        display: flex;
+        @include f-row;
         justify-content: center;
+        align-items: center;
         height: 0;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background: $neutral-color-5;
+        background: $bg-color-3;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
       }
     }
