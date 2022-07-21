@@ -18,25 +18,23 @@ async function writeName(): Promise<void> {
 }
 
 function projectsOver(): void {
-  if (matchMedia("(pointer: fine)")) {
-    const projectDivs = document.querySelectorAll(
-        ".projects-div"
-      ) as NodeListOf<HTMLElement>,
-      projectDivsImgs = document.querySelectorAll(
-        ".projects-div-img"
-      ) as NodeListOf<HTMLElement>;
-    projectDivs.forEach((el) => {
-      el.addEventListener("mouseover", () => {
-        (el.lastElementChild as HTMLElement).style.display = "flex";
-      });
-      el.addEventListener("mouseleave", () => {
-        (el.lastElementChild as HTMLElement).style.display = "none";
-      });
+  if (
+    !matchMedia("(pointer: fine)").matches 
+  )
+    return void 0;
+  const projectDivs = document.querySelectorAll(
+    ".projects-div"
+  ) as NodeListOf<HTMLElement>;
+  projectDivs.forEach((el) => {
+    const elInner = el.lastElementChild as HTMLElement;
+    elInner.classList.add("display-none");
+    el.addEventListener("mouseover", () => {
+      elInner.classList.remove("display-none");
     });
-    projectDivsImgs.forEach((el) => {
-      el.getClientRects()[0].top;
+    el.addEventListener("mouseleave", () => {
+      elInner.classList.add("display-none");
     });
-  }
+  });
 }
 
 function main() {

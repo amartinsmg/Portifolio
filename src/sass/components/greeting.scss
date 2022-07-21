@@ -22,7 +22,7 @@ $greeting-padding: 5vw;
       @include f-col;
       gap: 0.8rem;
       &-heading {
-        font-family: $font-2;
+        font: $font-3;
         font-size: 1.8rem;
         &-text-cursor {
           display: inline-block;

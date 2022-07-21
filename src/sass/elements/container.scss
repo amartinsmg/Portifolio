@@ -1,16 +1,21 @@
 @import "../variables";
 
 .container {
-  padding: 1.4rem 0;
+  padding: 2rem 0;
   width: 90%;
   margin: auto;
   &-heading {
-    font-family: $font-2;
+    font: $font-3;
+    font-size: 1.6rem;
   }
   &-text {
     padding: 2.5rem 0;
   }
   @media screen and (min-width: 768px) {
+    padding: 2.5rem 0;
     width: 80%;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 3.25rem 0;
   }
 }

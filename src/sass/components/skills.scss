@@ -3,11 +3,13 @@
 
 .skills {
   @include f-col;
-  min-height: 100vh;
+  min-height: $greeting-height;
   padding: 5%;
   gap: 5vh;
   &-heading {
     color: $secondary-color;
+    font: $font-3;
+    font-size: 1.4rem;
   }
   &-content {
     &-radio {
@@ -38,7 +40,7 @@
         }
         &-code {
           text-align: center;
-          font-family: $font-2;
+          font: $font-2;
         }
       }
     }
@@ -49,6 +51,9 @@
   @media screen and (min-width: 576px) {
     min-height: 24rem;
     gap: 2rem;
+    &-content-text-box {
+      text-align: center;
+    }
   }
   @media screen and (min-width: 810px) {
     min-height: 0;

@@ -5,13 +5,14 @@
   @include f-row;
   justify-content: space-between;
   align-items: center;
-  // position: sticky;
+  position: sticky;
   top: 0;
   width: 100%;
   height: $header-height;
   padding: 0 2rem;
   background-color: $bg-color-2;
-  font-family: $font-2;
+  font: $font-2;
+  z-index: 1;
   &-logo {
     height: 2.5rem;
   }

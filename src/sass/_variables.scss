@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;600&family=Roboto:wght@300;400&display=swap');
 
 $header-height: 3rem;
 
@@ -14,11 +14,14 @@ $neutral-color-6: #0f0f0f;
 
 $bg-color-1: $neutral-color-6;
 $bg-color-2: #0268bb;
-$bg-color-3: #2f2f2f;
+$bg-color-3: #1f1f1f;
+$bg-color-4: #013e70;
+$bg-color-5: #012a4b;
 
 $primary-color: $neutral-color-0;
 $secondary-color: #FA538D;
 
-$font-1: 'Roboto', sans-serif;
-$font-2: 'Inconsolata', monospace;
+$font-1: normal 300 1em 'Roboto', sans-serif;
+$font-2: normal 500 1em 'Inconsolata', monospace;
+$font-3: normal 600 1em 'Inconsolata', monospace;
 
