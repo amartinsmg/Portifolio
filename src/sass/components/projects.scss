@@ -1,0 +1,71 @@
+@import "../mixins";
+@import "../variables";
+
+#projects {
+  &-text {
+    padding-bottom: 1.5rem;
+  }
+  img {
+    max-width: 100%;
+  }
+  &-grid {
+    @include f-col;
+    align-items: center;
+    gap: 1.5rem;
+    .projects-div {
+      width: 18rem;
+      max-width: 100%;
+      &-inner {
+        @include f-col;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        &-heading {
+          text-align: center;
+          color: $secondary-color;
+        }
+        &-btn {
+          width: fit-content;
+          font-family: $font-2;
+          background-color: $neutral-color-2;
+        }
+      }
+      @media (pointer: fine) {
+        position: relative;
+        #project-grid-1-img {
+          content: url("../../public/QFCalculator.png");
+        }
+        #project-grid-2-img {
+          content: url("../../public/CenturyCalculator.png");
+        }
+        &-img {
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+        }
+        &-inner {
+          display: none;
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          top: 10%;
+          right: 10%;
+          background-color: #000000dd;
+          padding: 5%;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &-grid {
+      display: grid;
+      justify-content: center;
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }  
+  }
+  @media screen and (min-width: 1360px) {
+    &-grid {
+      grid-template: 1fr / 1fr 1fr 1fr;
+    }
+  }
+}
+

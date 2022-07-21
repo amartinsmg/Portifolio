@@ -3,7 +3,7 @@
 
 .skills {
   @include f-col;
-  min-height: $greeting-height;
+  min-height: 100vh;
   padding: 5%;
   gap: 5vh;
   &-heading {
@@ -43,11 +43,15 @@
       }
     }
   }
+  @media screen and (min-width: 412px) {
+    min-height: 30rem;
+  }
   @media screen and (min-width: 576px) {
-    min-height: 22.5rem;
+    min-height: 24rem;
     gap: 2rem;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 810px) {
+    min-height: 0;
     justify-content: center;
     &-content {
       @include f-row;
@@ -63,6 +67,6 @@
 @include showSkill("html");
 @include showSkill("css");
 @include showSkill("javascript");
-@include showSkill("typescript");
-@include showSkill("sqlite");
+@include showSkill("python");
 @include showSkill("c");
+@include showSkill("sqlite");

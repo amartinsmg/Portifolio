@@ -15,8 +15,10 @@ html, body {
 }
 
 @import "elements/a";
+@import "elements/btn";
 @import "elements/container";
 
 @import "components/page-header";
 @import "components/greeting";
 @import "components/about";
+@import "components/projects";
