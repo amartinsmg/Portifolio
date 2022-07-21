@@ -1,6 +1,6 @@
 {
-  "name": "amartinsmg.github.io",
-  "version": "0.2.0",
+  "name": "amartinsmg",
+  "version": "1.0.0",
   "description": "My personal portifolio",
   "scripts": {
     "build": "webpack",
