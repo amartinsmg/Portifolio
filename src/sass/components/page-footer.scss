@@ -1,9 +1,14 @@
 @import "../variables";
 
 #page-footer {
-  width: 100%;
-  padding-bottom: 0.5rem;
+  width: 90%;
+  margin: 0 5%;
+  padding: 0 0 0.5rem;
+  font-size: 0.7rem;
   text-align: center;
+  &-made-by {
+    padding: 0 0 0.2rem;
+  }
   a:hover {
     color: $neutral-color-2;
   }
