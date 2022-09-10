@@ -38,10 +38,10 @@
       @media screen and (pointer: fine) {
         position: relative;
         #project-grid-1-img {
-          content: url("../../public/QFCalculator.png");
+          content: url("../../public/qfcalculator_square.png");
         }
         #project-grid-2-img {
-          content: url("../../public/CenturyCalculator.png");
+          content: url("../../public/centurycalculator_square.png");
         }
         &-img {
           aspect-ratio: 1 / 1;
@@ -65,7 +65,7 @@
       display: grid;
       gap: 1.5rem;
       grid-template: 1fr 1fr / 1fr 1fr;
-    }  
+    }
   }
   @media screen and (min-width: 1360px) {
     &-grid {
@@ -73,4 +73,3 @@
     }
   }
 }
-
