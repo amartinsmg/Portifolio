@@ -7,16 +7,17 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: latest
+      - uses: mskelton/setup-yarn@v1
       - name: Build web-app
         run: |
-          npm ci
-          npm run build
+          yarn install
+          yarn build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
