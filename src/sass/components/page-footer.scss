@@ -20,15 +20,27 @@
     margin: 0 auto;
     background-color: $primary-color;
   }
-  &-phrase {
-    margin: 2rem 0 6rem;
-    &-latin {
-      font: $font-4;
-      font-size: 1.7em;
-      padding: 0 0 0.8rem;
+  &-bottom {
+    min-height: $greeting-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    &-emblem {
+      img {
+        margin: 0 auto;
+        width: min(10rem, 100%);
+      }
     }
-    &-translation {
-      font-size: 0.9em;
+    &-phrase {
+      &-latin {
+        font: $font-4;
+        font-size: 1.7em;
+        padding: 0 0 0.8rem;
+      }
+      &-translation {
+        font-size: 0.9em;
+      }
     }
   }
 }
