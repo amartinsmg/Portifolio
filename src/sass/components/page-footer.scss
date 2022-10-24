@@ -12,15 +12,16 @@
     a:hover {
       color: $neutral-color-2;
     }
+    padding: 0 0 2rem;
   }
   &-bar {
     height: 1px;
     width: 60%;
-    margin: 3rem auto 0;
+    margin: 0 auto;
     background-color: $primary-color;
   }
   &-phrase {
-    margin: 4rem 0;
+    margin: 2rem 0 6rem;
     &-latin {
       font: $font-4;
       font-size: 1.7em;
