@@ -6,13 +6,13 @@
   text-align: center;
   &-text {
     font-size: 0.7rem;
+    padding: 0 0 2rem;
     &-made-by {
       padding: 0 0 0.2rem;
     }
     a:hover {
       color: $neutral-color-2;
     }
-    padding: 0 0 2rem;
   }
   &-bar {
     height: 1px;
