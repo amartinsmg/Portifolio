@@ -11,6 +11,9 @@
     color: $secondary-color;
     font: $font-3;
     font-size: 1.4rem;
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
   }
   &-content {
     &-radio {
@@ -57,14 +60,6 @@
   }
   @media screen and (min-width: 810px) {
     min-height: 0;
-    &-content {
-      @include f-row;
-      &-labels {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.5rem 5vw 0.5rem 0;
-      }
-    }
   }
 }
 
